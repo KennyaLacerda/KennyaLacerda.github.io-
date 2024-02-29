@@ -10,18 +10,25 @@
     <h1>Instruções para Iniciar um Servidor Django</h1>
 
     <ol>
-        <li><strong>Instalar o Django:</strong> Certifique-se de ter o Django instalado usando o seguinte comando:<br>
+        <li><strong>Instalar o Django:</strong> Certifique-se de ter o Django instalado. Você pode instalá-lo usando o seguinte comando:<br>
             <code>pip install django</code></li>
 
-        <li><strong>Criar um Projeto Django:</strong> Abra o terminal e execute:<br>
+        <li><strong>Criar um Projeto Django:</strong> Abra o terminal e execute o seguinte comando, substituindo `nome_do_projeto` pelo nome desejado para o seu projeto:<br>
             <code>django-admin startproject nome_do_projeto</code></li>
 
-        <li><strong>Navegar até o Diretório do Projeto:</strong> Mude para o diretório do projeto com:<br>
+        <li><strong>Navegar até o Diretório do Projeto:</strong> Mude para o diretório do projeto com o seguinte comando:<br>
             <code>cd nome_do_projeto</code></li>
 
-        <!-- Adicione mais itens conforme necessário -->
+        <li><strong>Criar uma Aplicação:</strong> O Django é baseado no conceito de "aplicações". Crie uma aplicação dentro do seu projeto com o seguinte comando, substituindo `nome_da_aplicacao` pelo nome desejado:<br>
+            <code>python manage.py startapp nome_da_aplicacao</code></li>
 
-        <li><strong>Iniciar o Servidor:</strong> Execute o comando para iniciar o servidor Django:<br>
+        <li><strong>Migrações e Aplicação:</strong> Execute o seguinte comando para aplicar as migrações iniciais e criar o banco de dados SQLite (ou o motor de banco de dados configurado em seu arquivo `settings.py`):<br>
+            <code>python manage.py migrate</code></li>
+
+        <li><strong>Criar um Superusuário (opcional):</strong> Você pode criar um superusuário para acessar o painel de administração do Django. Isso é opcional, mas pode ser útil:<br>
+            <code>python manage.py createsuperuser</code></li>
+
+        <li><strong>Iniciar o Servidor:</strong> Finalmente, inicie o servidor de desenvolvimento executando o seguinte comando:<br>
             <code>python manage.py runserver</code></li>
 
         <li><strong>Acessar a Aplicação:</strong> Abra seu navegador e visite <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>. Você também pode acessar o painel de administração em <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> usando as credenciais do superusuário que você criou.</li>
